@@ -3,7 +3,7 @@
 @import 'mixins.scss';
 
 .header{
-    background:linear-gradient(rgba(255, 255, 255, 0.1),rgba(0, 0, 0, 0.4)), url('/img/bg.png') no-repeat 100% 100%;
+    background:linear-gradient(rgba(255, 255, 255, 0.1),rgba(0, 0, 0, 0.4)), url('img/bg.png') no-repeat 100% 100%;
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -89,7 +89,7 @@
         .about{
             &-icons{
                 min-height: 400px;
-                background: url(/img/border.png) no-repeat 100% 100% ;
+                background: url(img/border.png) no-repeat 100% 100% ;
                 background-position: center;
                 display: flex;
                 flex-direction: column;
@@ -166,6 +166,7 @@
                     color: #6e774a;
                 }
                 .card-info{
+                    min-width: 610px;
                     border: 1px solid #ced6af;
                     padding-top: 40px;
                     display: flex;

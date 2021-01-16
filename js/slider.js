@@ -4,6 +4,7 @@ $('.prod-slider').slick({
     slidesToScroll: 3,
     speed: 300,
     arrows: true,
+    autoplay: true,
     responsive: [
         {
           breakpoint: 600,
