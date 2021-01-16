@@ -1,0 +1,6 @@
+@mixin text($weight, $size, $color){
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+    font-family: 'Oswald';
+}

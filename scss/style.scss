@@ -1,0 +1,197 @@
+@import 'fonts.scss';
+@import 'normilize.scss';
+@import 'mixins.scss';
+
+.header{
+    background:linear-gradient(rgba(255, 255, 255, 0.1),rgba(0, 0, 0, 0.4)), url('/img/bg.png') no-repeat 100% 100%;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    .navigation{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #bfc6d1;
+        
+    }
+    &-menu{
+        display: flex;
+        &__item{
+            list-style-type: none;
+        }
+        &__link{
+            text-decoration: none;
+            @include text(400, 16px, white);
+            // padding-bottom: 30px;
+            padding-right: 45px;
+            // padding-top: ;
+            :active{
+                text-decoration: line-through solid #9db892;
+            }
+
+        }
+    }
+    &-logo{
+        @include text(400, 30px, white);
+        text-align: center;
+        
+    }
+    &-search{
+        &__btn{
+            .fas{
+                color: white;
+            }
+            @include text(400, 16px, white);
+            border-left: 1px solid  #bfc6d1;
+            border-top: none;
+            border-bottom: none;
+            border-right: none;
+            padding: 30px;
+            background: top;
+        }
+    }
+    &-intro{
+        text-align: end;
+        margin-top: 10%;
+        margin-right: 9%;
+        &__title{
+            @include text(400, 55px, white);
+            letter-spacing: 20px;
+            margin: 0;
+        }
+        &__subtitle{
+            @include text(300, 24px, #f7f8f3);
+            letter-spacing: 10px;
+           
+        }
+        &__btn{
+            @include text(400, 20px, white);
+            background: top;
+            height: 70px;
+            width: 270px;
+            border: 1px solid#9db892;
+        }
+        &__text{
+            @include text(300, 18px, white);
+            letter-spacing: 5px;
+        }
+        &__desc{
+            @include text(400, 26px, white);
+            transform: rotate(-90deg);
+            transform-origin: top ;
+            position: absolute;
+            
+        }
+    }
+}
+.main{
+        background-color: #f7f8f3;
+        .about{
+            &-icons{
+                min-height: 400px;
+                background: url(/img/border.png) no-repeat 100% 100% ;
+                background-position: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                &__text{
+                    @include text(400, 24px, #1c1c1b);
+                    text-align: center;
+                    letter-spacing: 7px;
+                }
+            }
+            &-prod{
+                max-width: 1170px;
+                margin: 0 auto;
+                .prod{
+                    &-head{
+                        display: flex;
+                        justify-content:left;
+                        &__btn{
+                            @include text(400, 30px, #1c1c1b);
+                            letter-spacing: 7px;
+                            border-bottom:2px solid #ced6af;
+                            background: top;
+                            border-top: none;
+                            border-left: none;
+                            border-right: none;
+                            padding-bottom: 20px;
+                            padding-right: 100px;
+                            :active{
+                                border-bottom:1px solid #1c1c1b;
+                            }
+                        }
+                    }    
+                    &-info{
+                        display: flex;
+                        justify-content: center;
+
+                        &__desc{
+                            text-align: left;
+                            padding-top: 7%;
+                            padding-right: 19%;
+                            line-height: 35px;
+                        }
+                        &__title{
+                            @include text(400, 24px,  #1c1c1b);
+                            letter-spacing: 7px;
+                        }
+                        &__text{
+                            @include text(300, 18px, #6e774a);
+                            letter-spacing: 6px;
+                        }
+                    }
+                    &-photo{
+                        padding-top: 8%;
+                        &__foto{
+                            padding-bottom: 30px;
+                        }
+                    }
+                }
+            }
+        }
+        .prod{
+            margin-top: 120px;
+            &__title{
+                @include text(400, 30px, #1c1c1b);
+                text-align: center;
+                letter-spacing: 9px;
+                padding-bottom: 90px;
+            }
+            &-card{
+                
+                padding-right: 40px;
+                .fa-star{
+                    color: #6e774a;
+                }
+                .card-info{
+                    border: 1px solid #ced6af;
+                    padding-top: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: #ffffff;
+                    &__desc{
+                        @include text(400, 18px,  #1c1c1b);
+                        letter-spacing: 4px;
+                    }
+                }
+                .card-price{
+                    display: flex;
+                    background-color: #f1f1f1;
+                    &__text{
+                        @include text(400, 18px, #1c1c1b);
+                        letter-spacing: 4px;
+                    }
+                    &__btn{
+                        background: #6e774a;
+                        @include text(400, 20px, #ffffff);
+                        padding: 30px, 40px, 30px, 40px;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+
