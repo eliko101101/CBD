@@ -457,7 +457,11 @@ template {
 }
 .main .about-icons {
   min-height: 400px;
+<<<<<<< HEAD
   background: url(./img/border.png) no-repeat 100% 100%;
+=======
+  background: url(../img/border.png) no-repeat 100% 100%;
+>>>>>>> dd7a6e5b82577c3c98b96e791622498dc8f7449f
   background-position: center;
   display: flex;
   flex-direction: column;

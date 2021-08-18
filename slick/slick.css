@@ -3,7 +3,8 @@
 {
     position: relative;
 
-    display: block;
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
 
     -webkit-user-select: none;
