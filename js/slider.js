@@ -1,9 +1,10 @@
 $('.prod-slider').slick({
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     speed: 300,
-    arrows: true,
+    arrows: false,
+    autoplay: true,
     responsive: [
         {
           breakpoint: 600,
@@ -20,4 +21,14 @@ $('.prod-slider').slick({
           }
         }
     ] 
+});
+
+$('.response-slider').slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  speed: 350,
+  autoplay: true,
+  arrows: false,
+ 
 });

@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Oswald";
-  src: url(/fonts/Oswald-Regular.ttf);
+  src: url(../fonts/Oswald-Regular.ttf);
   font-weight: 400;
 }
 @font-face {
   font-family: "Oswald";
-  src: url(/fonts/Oswald-Light.ttf);
+  src: url(../fonts/Oswald-Light.ttf);
   font-weight: 300;
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -351,7 +351,7 @@ template {
 }
 
 .header {
-  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.4)), url("/img/bg.png") no-repeat 100% 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.4)), url("../img/bg.png") no-repeat 100% 100%;
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -367,6 +367,7 @@ template {
 }
 .header-menu__item {
   list-style-type: none;
+  padding-right: 45px;
 }
 .header-menu__link {
   text-decoration: none;
@@ -374,9 +375,8 @@ template {
   font-size: 16px;
   font-weight: 400;
   font-family: "Oswald";
-  padding-right: 45px;
 }
-.header-menu__link :active {
+.header-menu__link :visited {
   -webkit-text-decoration: line-through solid #9db892;
           text-decoration: line-through solid #9db892;
 }
@@ -432,6 +432,9 @@ template {
   width: 270px;
   border: 1px solid #9db892;
 }
+.header-intro__btn svg {
+  padding-bottom: 7px;
+}
 .header-intro__text {
   color: white;
   font-size: 18px;
@@ -454,7 +457,7 @@ template {
 }
 .main .about-icons {
   min-height: 400px;
-  background: url(/img/border.png) no-repeat 100% 100%;
+  background: url(./img/border.png) no-repeat 100% 100%;
   background-position: center;
   display: flex;
   flex-direction: column;
@@ -537,6 +540,7 @@ template {
   padding-bottom: 90px;
 }
 .main .prod-card {
+  width: 30%;
   padding-right: 40px;
 }
 .main .prod-card .fa-star {
@@ -557,9 +561,13 @@ template {
   font-family: "Oswald";
   letter-spacing: 4px;
 }
+.main .prod-card .card-info__photo {
+  height: 250px;
+}
 .main .prod-card .card-price {
   display: flex;
   background-color: #f1f1f1;
+  justify-content: space-between;
 }
 .main .prod-card .card-price__text {
   color: #1c1c1b;
@@ -574,6 +582,193 @@ template {
   font-size: 20px;
   font-weight: 400;
   font-family: "Oswald";
-  padding: 30px, 40px, 30px, 40px;
+  padding: 25px;
   border: none;
+}
+.main .prod-card .card-price__btn svg {
+  padding-bottom: 5px;
+}
+.main .answer {
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+.main .answer__title {
+  color: black;
+  font-size: 30px;
+  font-weight: 400;
+  font-family: "Oswald";
+  text-align: center;
+  letter-spacing: 7px;
+}
+.main .answer-accordion {
+  margin: 0 auto;
+  width: 42%;
+  background: none;
+}
+.main .answer-accordion__title {
+  color: #a5ab8e;
+  font-size: 18px;
+  font-weight: 300;
+  font-family: "Oswald";
+  letter-spacing: 7px;
+  background: none;
+  border: none;
+  border-top: 2px solid #eaedde;
+  border-bottom: 2px solid #eaedde;
+}
+.main .answer-accordion__subtitle {
+  color: black;
+  font-size: 18px;
+  font-weight: 300;
+  font-family: "Oswald";
+  text-align: left;
+  background: none;
+  border: none;
+}
+.main .response {
+  background: url(../img/bg_2.png) no-repeat 100% 100%;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+.main .response-resp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .response-resp__stars {
+  color: #aab384;
+  font-size: 15px;
+}
+.main .response-resp__text {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 300;
+  font-family: "Oswald";
+  text-align: center;
+  letter-spacing: 5px;
+}
+.main .response-resp__name {
+  color: white;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Oswald";
+  text-align: center;
+  letter-spacing: 5px;
+}
+.main .response-resp__name .fas {
+  color: #ffffff;
+  width: 45px;
+}
+.main .response-resp__name .name {
+  padding-bottom: 10px;
+}
+.main .response-slider {
+  max-width: 53%;
+  padding-top: 20%;
+  margin: 0 auto;
+}
+.main .response__subtitle {
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+  font-family: "Oswald";
+  position: absolute;
+  transform: rotate(90deg);
+  transform-origin: top;
+  letter-spacing: 9px;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 10%;
+  align-items: center;
+}
+.footer-logo__logo {
+  color: #6e774a;
+  font-size: 60px;
+  font-weight: 400;
+  font-family: "Oswald";
+  margin: 0;
+}
+.footer-info {
+  justify-content: space-evenly;
+  display: flex;
+  align-items: baseline;
+}
+.footer-list__item {
+  list-style-type: none;
+  text-align: center;
+}
+.footer-list__link {
+  text-decoration: none;
+  color: #6e774a;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: "Oswald";
+  line-height: 30px;
+}
+.footer-list__link :hover {
+  border-bottom: 1px solid #6e774a;
+  cursor: pointer;
+}
+.footer-icons {
+  color: #6e774a;
+  padding-left: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-icons__icon {
+  padding-bottom: 15%;
+}
+.footer-icons .fa-twitter {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.footer-form {
+  margin-top: 5%;
+}
+.footer-form__label {
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Oswald";
+  text-align: center;
+  letter-spacing: 3px;
+  margin-left: 40%;
+}
+.footer-form__form {
+  border: 2px solid #ced6af;
+  height: 60px;
+  width: 25%;
+  margin: 0 auto;
+}
+.footer-form input {
+  border: none;
+  color: #6e774a;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Oswald";
+  letter-spacing: 5px;
+  width: 80%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-left: 3%;
+}
+.footer-form__btn {
+  border: none;
+  background: none;
+}
+.footer-form__btn :active {
+  border-left: 2px solid #ced6af;
+}
+.footer__copy {
+  color: #808861;
+  font-size: 11px;
+  font-weight: 30px;
+  font-family: "Oswald";
+  letter-spacing: 3px;
+  text-align: center;
 }

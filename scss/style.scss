@@ -3,7 +3,7 @@
 @import 'mixins.scss';
 
 .header{
-    background:linear-gradient(rgba(255, 255, 255, 0.1),rgba(0, 0, 0, 0.4)), url('/img/bg.png') no-repeat 100% 100%;
+    background:linear-gradient(rgba(255, 255, 255, 0.1),rgba(0, 0, 0, 0.4)), url('../img/bg.png') no-repeat 100% 100%;
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -18,14 +18,13 @@
         display: flex;
         &__item{
             list-style-type: none;
+            padding-right: 45px;
         }
         &__link{
             text-decoration: none;
             @include text(400, 16px, white);
-            // padding-bottom: 30px;
-            padding-right: 45px;
-            // padding-top: ;
-            :active{
+            
+            :visited{
                 text-decoration: line-through solid #9db892;
             }
 
@@ -70,6 +69,9 @@
             height: 70px;
             width: 270px;
             border: 1px solid#9db892;
+            svg{
+                padding-bottom: 7px;
+            }
         }
         &__text{
             @include text(300, 18px, white);
@@ -80,7 +82,6 @@
             transform: rotate(-90deg);
             transform-origin: top ;
             position: absolute;
-            
         }
     }
 }
@@ -89,7 +90,7 @@
         .about{
             &-icons{
                 min-height: 400px;
-                background: url(/img/border.png) no-repeat 100% 100% ;
+                background: url(./img/border.png) no-repeat 100% 100% ;
                 background-position: center;
                 display: flex;
                 flex-direction: column;
@@ -160,7 +161,7 @@
                 padding-bottom: 90px;
             }
             &-card{
-                
+                width: 30%;
                 padding-right: 40px;
                 .fa-star{
                     color: #6e774a;
@@ -176,10 +177,14 @@
                         @include text(400, 18px,  #1c1c1b);
                         letter-spacing: 4px;
                     }
+                    &__photo{
+                        height: 250px;
+                    }
                 }
                 .card-price{
                     display: flex;
                     background-color: #f1f1f1;
+                    justify-content: space-between;
                     &__text{
                         @include text(400, 18px, #1c1c1b);
                         letter-spacing: 4px;
@@ -187,11 +192,170 @@
                     &__btn{
                         background: #6e774a;
                         @include text(400, 20px, #ffffff);
-                        padding: 30px, 40px, 30px, 40px;
+                        padding: 25px;
                         border: none;
+                        svg{
+                            padding-bottom: 5px;
+                        }
                     }
                 }
             }
         }
+        .answer{
+            padding-top: 10%;
+            padding-bottom: 10%;
+            &__title{
+                @include text(400,30px, black);
+                text-align: center;
+                letter-spacing: 7px;
+            }
+            &-accordion{
+                margin: 0 auto;
+                width: 42%;
+                background: none;
+                &__title{
+                    @include text(300, 18px, #a5ab8e);
+                    letter-spacing: 7px;
+                    background: none;
+                    border: none;
+                    border-top: 2px solid #eaedde;
+                    border-bottom: 2px solid #eaedde;
+                }
+                &__subtitle{
+                    @include text(300, 18px, black);
+                    text-align: left;
+                    background: none;
+                    border:none;
+                }
+            }
+        }
+        .response{
+            background: url(../img/bg_2.png) no-repeat 100% 100%;
+            background-position: center;
+            background-size: cover;
+            min-height: 100vh;
+            &-resp{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                &__stars{
+                    color: #aab384;
+                    font-size: 15px;
+                }
+                &__text{
+                    @include text(300, 22px, #ffffff);
+                    text-align: center;
+                    letter-spacing: 5px;
+                }
+                &__name{
+                    @include text(400, 24px, white);
+                    text-align: center;
+                    letter-spacing: 5px;
+                    .fas{
+                        color:#ffffff;
+                        width: 45px;
+                    }
+                    .name{
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+            &-slider{
+                max-width: 53%;
+                padding-top: 20%;
+                margin: 0 auto;
+            }
+            &__subtitle{
+                @include text(300, 24px, white);
+                position: absolute;
+                transform: rotate(90deg);
+                transform-origin: top ;
+                letter-spacing: 9px;
+            }
+        }
+}
+.footer{
+    &-logo{
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 10%;
+        align-items: center;
+        &__logo{
+            @include text(400, 60px, #6e774a);
+            margin: 0;
+        }
     }
+    &-info{
+        justify-content: space-evenly;
+        display: flex;
+        align-items: baseline;
+    }
+    &-list{
+        &__item{
+            list-style-type: none;
+            text-align: center;
+        }
+        &__link{
+            text-decoration: none;
+            @include text(300, 14px, #6e774a);
+           
+            line-height: 30px;
+            :hover{
+                border-bottom: 1px solid #6e774a ;
+                cursor: pointer;
+            }
+        }
+    } 
+    &-icons{
+        color:#6e774a;
+        padding-left: 3%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__icon{
+            padding-bottom: 15%;
+        }
+       .fa-twitter{
+           padding-left: 60px;
+           padding-right: 60px;
+       }
+    }
+    
+    &-form{
+        margin-top: 5%;
+        &__label{
+            @include text(400, 18px, black);
+            text-align: center;
+            letter-spacing: 3px;
+            margin-left: 40%;
+        }
+        &__form{
+        border: 2px solid #ced6af;
+        height: 60px;
+        width: 25%;
+        margin: 0 auto;
+        }
+        input{
+            border: none;
+            @include text(300, 16px, #6e774a);
+            letter-spacing: 5px;
+            width: 80%;
+            height: 100%;
+            box-sizing: border-box;
+            padding-left: 3%;
+        }
+        &__btn{
+            border: none;
+            background: none;
+            :active{
+                border-left:2px solid #ced6af;
+            }
+        }
+    }
+    &__copy{
+        @include text(30px, 11px, #808861);
+        letter-spacing: 3px;
+        text-align: center;
+    }
+}
 
